@@ -1,0 +1,259 @@
+/*
+ * Estilos para Apart Cabañas Río Cuarto
+ * Este archivo define un tema oscuro con tipografías claras,
+ * rejillas responsivas y un diseño limpio para todas las plataformas.
+ */
+
+/* Normalización básica */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #222;
+  color: #eee;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: #f7c600;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  position: sticky;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+}
+
+.logo {
+  width: 140px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+nav a {
+  margin-left: 1rem;
+  font-weight: 500;
+}
+nav a:hover {
+  color: #ffe580;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 90%;
+}
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.btn {
+  display: inline-block;
+  background-color: #f7c600;
+  color: #222;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background-color: #e0b100;
+}
+
+/* Services */
+.services {
+  padding: 3rem 1.5rem;
+  background-color: #333;
+  text-align: center;
+}
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+.service-item {
+  background-color: #444;
+  padding: 1.5rem;
+  border-radius: 6px;
+  text-align: left;
+}
+.service-item h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  color: #ffd966;
+}
+.service-item p {
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+/* Gallery */
+.gallery {
+  padding: 3rem 1.5rem;
+  background-color: #222;
+}
+.gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.gallery-item img,
+.gallery-item video {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.gallery-item.video video {
+  height: 300px;
+}
+
+/* Contact section */
+.contact-section {
+  padding: 3rem 1.5rem;
+  background-color: #333;
+}
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.contact-section p {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.contact-list {
+  list-style: none;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+.contact-list li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+.contact-list strong {
+  color: #ffd966;
+}
+.map-container {
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+.map-container iframe {
+  width: 100%;
+  height: 350px;
+  border: 0;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  background-color: #25D366;
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  font-size: 0.95rem;
+}
+.whatsapp-float:hover {
+  background-color: #20b858;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #111;
+  color: #999;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero {
+    height: 50vh;
+  }
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav {
+    margin-top: 0.5rem;
+  }
+  nav a {
+    display: inline-block;
+    margin: 0.5rem 0.5rem 0 0;
+  }
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
