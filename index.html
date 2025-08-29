@@ -1,105 +1,316 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apart Cabañas Río Cuarto | Hotel, alojamiento y cabañas</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-</head>
-<body>
-  <header>
-    <nav>
-      <a href="index.html" class="logo">
-        <img src="images/logo-cabanias.jpg" alt="Logo Apart Cabañas Río Cuarto">
-        <span>Apart Cabañas Río Cuarto</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="#tarifas">Tarifas</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#galeria">Galería</a></li>
-        <li><a href="contacto.html">Reservas / Contacto</a></li>
-        <li class="social"><a href="https://www.instagram.com/apartcabaniasriocuarto/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a></li>
-      </ul>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apart Cabañas Río Cuarto | Hotel y Alojamiento en Río Cuarto</title>
+    <meta
+      name="description"
+      content="Complejo de 17 cabañas totalmente equipadas en Río Cuarto, Córdoba. Cabañas cómodas y equipadas con Wi‑Fi, cochera, pileta y quincho. Reservá directo, sin comisiones."
+    />
+    <meta
+      name="keywords"
+      content="hotel en Río Cuarto, alojamiento Río Cuarto, hospedaje Río Cuarto, apart, cabañas Río Cuarto, apart cabañas, Río Cuarto"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
 
-  <main>
-    <section id="hero" class="hero">
-      <img src="images/portada.jpg" alt="Portada" class="hero-img">
-      <h1>Bienvenidos a Apart Cabañas Río Cuarto</h1>
-      <p>Complejo de 17 cabañas totalmente equipadas para el confort de sus huéspedes.
-         Cabañas cómodas y equipadas, Wi-Fi, cochera, pileta y quincho. Reservá directo, sin comisiones.</p>
-    </section>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-5QLG6KSD");
+    </script>
+    <!-- End Google Tag Manager -->
 
-    <section id="tarifas" class="tarifas">
-      <h2>Tarifas</h2>
-      <div class="tarifas-grid">
-        <div class="tarifa-card">
-          <img src="images/1-plaza.jpg" alt="Cabaña 2 personas">
-          <h3>Cabaña 2 Personas</h3>
-          <p>1 cama matrimonial<br>o<br>2 individuales</p>
-          <p class="precio">Desde $80.000</p>
-          <a href="https://wa.me/543584650416?text=Hola..." class="btn">Reservar</a>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZEE3XF0SP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-1ZEE3XF0SP");
+    </script>
+    <!-- End Google Analytics -->
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", "908743106466719");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=908743106466719&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <!-- Schema.org markup for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LodgingBusiness",
+        "name": "Apart Cabañas Río Cuarto",
+        "description": "Complejo de cabañas equipadas con Wi‑Fi, cochera, pileta y quincho en Río Cuarto, Córdoba.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Garibaldi 1243",
+          "addressLocality": "Río Cuarto",
+          "addressRegion": "Córdoba",
+          "addressCountry": "AR"
+        },
+        "telephone": "+54 358 4650416",
+        "url": "https://aniasriocuarto.github.io",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -33.134643999999996,
+          "longitude": -64.34949429999999
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5QLG6KSD"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Header -->
+    <header>
+      <div class="navbar">
+        <a class="logo" href="index.html">
+          <img src="images/logo.jpg" alt="Logo Apart Cabañas Río Cuarto" />
+          <span>Apart Cabañas Río Cuarto</span>
+        </a>
+        <nav>
+          <a href="#tarifas">Tarifas</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#galeria">Galería</a>
+          <a href="contacto.html">Reservas / Contacto</a>
+          <!-- Redes sociales -->
+          <a
+            href="https://www.facebook.com/apartcabaniasriocuarto"
+            target="_blank"
+            class="social-icon facebook"
+            aria-label="Facebook"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/apartcabaniasriocuarto/"
+            target="_blank"
+            class="social-icon instagram"
+            aria-label="Instagram"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main>
+      <!-- Hero section -->
+      <section id="hero">
+        <p class="hero-description">
+          Complejo de 17 cabañas totalmente equipadas para el confort de sus
+          huéspedes. Cabañas cómodas y equipadas, Wi‑Fi, cochera, pileta y
+          quincho. Reservá directo, sin comisiones.
+        </p>
+      </section>
+
+      <!-- Tarifas section -->
+      <section id="tarifas">
+        <h2>Tarifas</h2>
+        <div class="tarifas-grid">
+          <!-- Cabaña 2 personas -->
+          <div class="tarjeta">
+            <img src="images/1_plaza.jpg" alt="Cabaña 2 personas" />
+            <div class="contenido">
+              <span class="titulo">Cabaña 2 Personas</span>
+              <p>1 cama matrimonial<br />o<br />2 individuales</p>
+              <p>Desde $80.000</p>
+              <a
+                href="https://wa.me/543584650416?text=Hola,%20me%20comunico%20desde%20la%20página%20para%20consultar%20más%20información%20sobre%20las%20cabañas."
+                class="btn-reservar"
+                >Reservar</a
+              >
+            </div>
+          </div>
+          <!-- Cabaña 3 personas -->
+          <div class="tarjeta">
+            <img src="images/cabana1-2.jpeg" alt="Cabaña 3 personas" />
+            <div class="contenido">
+              <span class="titulo">Cabaña 3 Personas</span>
+              <p>1 matrimonial + 1 individual<br />o<br />3 individuales</p>
+              <p>Desde $70.000</p>
+              <a
+                href="https://wa.me/543584650416?text=Hola,%20me%20comunico%20desde%20la%20página%20para%20consultar%20más%20información%20sobre%20las%20cabañas."
+                class="btn-reservar"
+                >Reservar</a
+              >
+            </div>
+          </div>
+          <!-- Cabaña 4 personas -->
+          <div class="tarjeta">
+            <img src="images/cabana1-2.jpeg" alt="Cabaña 4 personas" />
+            <div class="contenido">
+              <span class="titulo">Cabaña 4 Personas</span>
+              <p>1 matrimonial + 2 individuales<br />o<br />4 individuales</p>
+              <p>Desde $80.000</p>
+              <a
+                href="https://wa.me/543584650416?text=Hola,%20me%20comunico%20desde%20la%20página%20para%20consultar%20más%20información%20sobre%20las%20cabañas."
+                class="btn-reservar"
+                >Reservar</a
+              >
+            </div>
+          </div>
+          <!-- Cabaña 5 personas -->
+          <div class="tarjeta">
+            <img src="images/cabana1-2.jpeg" alt="Cabaña 5 personas" />
+            <div class="contenido">
+              <span class="titulo">Cabaña 5 Personas</span>
+              <p>1 matrimonial + 3 individuales<br />o<br />5 individuales</p>
+              <p>Desde $90.000</p>
+              <a
+                href="https://wa.me/543584650416?text=Hola,%20me%20comunico%20desde%20la%20página%20para%20consultar%20más%20información%20sobre%20las%20cabañas."
+                class="btn-reservar"
+                >Reservar</a
+              >
+            </div>
+          </div>
         </div>
-        <div class="tarifa-card">
-          <img src="images/cabana-1-2.jpeg" alt="Cabaña 3 personas">
-          <h3>Cabaña 3 Personas</h3>
-          <p>1 matrimonial + 1 individual<br>o<br>3 individuales</p>
-          <p class="precio">Desde $70.000</p>
-          <a href="https://wa.me/543584650416?text=Hola..." class="btn">Reservar</a>
+        <div class="check-in-out">
+          <span><strong>Check in:</strong> 12:00 PM</span>
+          <span><strong>Check out:</strong> 10:00 AM</span>
         </div>
-        <div class="tarifa-card">
-          <img src="images/cabana-1-2.jpeg" alt="Cabaña 4 personas">
-          <h3>Cabaña 4 Personas</h3>
-          <p>1 matrimonial + 2 individuales<br>o<br>4 individuales</p>
-          <p class="precio">Desde $80.000</p>
-          <a href="https://wa.me/543584650416?text=Hola..." class="btn">Reservar</a>
+      </section>
+
+      <!-- Servicios section -->
+      <section id="servicios">
+        <h2>Servicios</h2>
+        <ul class="servicios-lista">
+          <li><i class="fa-solid fa-wifi"></i> Wi‑Fi alta velocidad</li>
+          <li><i class="fa-solid fa-car"></i> Cochera cubierta</li>
+          <li><i class="fa-solid fa-person-swimming"></i> Pileta</li>
+          <li><i class="fa-solid fa-fire"></i> Quincho</li>
+          <li><i class="fa-solid fa-snowflake"></i> Aire acondicionado</li>
+          <li><i class="fa-solid fa-fire"></i> Calefacción</li>
+          <li><i class="fa-solid fa-shirt"></i> Ropa blanca incluida</li>
+          <li><i class="fa-solid fa-tv"></i> Smart TV / Cable</li>
+          <li><i class="fa-solid fa-utensils"></i> Cocina equipada</li>
+          <li><i class="fa-solid fa-tree"></i> Patio / Jardín</li>
+        </ul>
+      </section>
+
+      <!-- Galería section -->
+      <section id="galeria">
+        <h2>Galería</h2>
+        <div class="galeria-container">
+          <button class="galeria-prev" aria-label="Anterior">&#10094;</button>
+          <div class="galeria-slider"><!-- Slides are generated via script.js --></div>
+          <button class="galeria-next" aria-label="Siguiente">&#10095;</button>
         </div>
-        <div class="tarifa-card">
-          <img src="images/cabana-1-2.jpeg" alt="Cabaña 5 personas">
-          <h3>Cabaña 5 Personas</h3>
-          <p>1 matrimonial + 3 individuales<br>o<br>5 individuales</p>
-          <p class="precio">Desde $90.000</p>
-          <a href="https://wa.me/543584650416?text=Hola..." class="btn">Reservar</a>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-col">
+          <a class="logo" href="index.html">
+            <img src="images/logo.jpg" alt="Logo Apart Cabañas Río Cuarto" />
+            <span>Apart Cabañas Río Cuarto</span>
+          </a>
+          <p class="direccion">
+            <strong>Ubicación</strong><br />
+            Av. Garibaldi 1243, Río Cuarto, Córdoba<br />
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Av.+Garibaldi+1243,+R%C3%ADo+Cuarto,+C%C3%B3rdoba"
+              target="_blank"
+              >Ver en Google Maps</a
+            >
+          </p>
+        </div>
+        <div class="footer-col">
+          <p><strong>Contacto</strong></p>
+          <p>
+            Email:
+            <a href="mailto:cabaniasriocuarto@gmail.com"
+              >cabaniasriocuarto@gmail.com</a
+            >
+          </p>
+          <p>
+            Celular:
+            <a href="tel:+543584650416">+54 358 465 0416</a>
+          </p>
+          <p>
+            WhatsApp:
+            <a
+              href="https://wa.me/543584650416?text=Hola,%20me%20comunico%20desde%20la%20página%20para%20consultar%20más%20información%20sobre%20las%20cabañas."
+              >Chatear</a
+            >
+          </p>
         </div>
       </div>
-      <p class="check-info"><strong>Check in:</strong> 12:00 PM &nbsp;&nbsp; <strong>Check out:</strong> 10:00 AM</p>
-    </section>
+    </footer>
 
-    <section id="servicios" class="servicios">
-      <h2>Servicios</h2>
-      <div class="servicios-list">
-        <div class="servicio-item"><i class="fa fa-wifi"></i><span>Wi-Fi alta velocidad</span></div>
-        <div class="servicio-item"><i class="fa fa-car"></i><span>Cochera cubierta</span></div>
-        <div class="servicio-item"><i class="fa fa-person-swimming"></i><span>Pileta</span></div>
-        <div class="servicio-item"><i class="fa fa-fire"></i><span>Quincho</span></div>
-        <div class="servicio-item"><i class="fa fa-snowflake"></i><span>Aire acondicionado</span></div>
-        <div class="servicio-item"><i class="fa fa-fire-flame-curved"></i><span>Calefacción</span></div>
-        <div class="servicio-item"><i class="fa fa-shirt"></i><span>Ropa blanca incluida</span></div>
-        <div class="servicio-item"><i class="fa fa-tv"></i><span>Smart TV / Cable</span></div>
-        <div class="servicio-item"><i class="fa fa-utensils"></i><span>Cocina equipada</span></div>
-        <div class="servicio-item"><i class="fa fa-seedling"></i><span>Patio / Jardín</span></div>
-      </div>
-    </section>
+    <!-- Floating WhatsApp Button -->
+    <a
+      href="https://wa.me/543584650416?text=Hola,%20me%20comunico%20desde%20la%20página%20para%20consultar%20más%20información%20sobre%20las%20cabañas."
+      class="whatsapp-float"
+      id="whatsapp-float"
+      target="_blank"
+      aria-label="WhatsApp"
+      ><i class="fa-brands fa-whatsapp"></i
+    ></a>
 
-    <section id="galeria" class="galeria">
-      <h2>Galería</h2>
-      <div class="slider">
-        <button class="prev">&#10094;</button>
-        <div class="slides">
-          <video controls>
-            <source src="video/videoplayback.mp4" type="video/mp4">
-            Tu navegador no soporta video.
-          </video>
-          <img src="images/pileta.jpg" alt="Pileta">
-          <img src="images/pileta-2.jpg" alt="Pileta 2">
-          <img src="images/ping-pong.jpg" alt="Ping Pong">
-          <img src="images/quincho-chico.jpg" alt="Quincho chico">
-          <img src="images/foto-4.jpg" alt="Foto 4">
-          <img src="images/foto-7.jpg" alt="Foto 7">
-        </div>
-        <button class="next">&#10095;</button>
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+      <span class="close">&times;</span>
+      <div class="lightbox-content"></div>
+    </div>
+
+    <!-- FontAwesome -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+      defer
+    ></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
       </div>
     </section>
   </main>
