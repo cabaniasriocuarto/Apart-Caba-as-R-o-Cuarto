@@ -1,0 +1,768 @@
+/*
+ * General styles for the Apart Cabañas Río Cuarto site.
+ * This stylesheet defines a dark theme with warm accent colors, responsive
+ * layouts for each section, and improved readability.
+ */
+
+/* Reset default margins and set base font */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0f0f0f;
+  color: #f5f5f5;
+  scroll-behavior: smooth;
+  /* Deja espacio para la barra de navegación fija */
+  padding-top: 80px;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  margin: 0;
+  font-weight: 600;
+  color: #ffffff;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Navigation bar */
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #0f0f0f;
+  border-bottom: 1px solid #222;
+  /* Hacer que la barra de navegación sea flotante (fija) para que permanezca visible al hacer scroll */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+header nav .logo {
+  /* Mostrar imagen junto con texto en la cabecera */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fdd835;
+}
+
+/* Ajuste de tamaño para la imagen del logo en la cabecera */
+header nav .logo img {
+  height: 40px;
+  width: auto;
+}
+
+/* Iconos sociales en header para móviles */
+.social-header-mobile {
+  display: none;
+  gap: 1rem;
+  align-items: center;
+}
+
+.social-header-mobile a {
+  color: #f5f5f5;
+  font-size: 1.2rem;
+  transition: opacity 0.3s ease;
+}
+
+.social-header-mobile a:hover {
+  opacity: 0.8;
+}
+
+.social-header-mobile a.facebook { color: #1877f2; }
+.social-header-mobile a.instagram { 
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header nav .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+header nav .nav-links li a {
+  color: #f5f5f5;
+  text-decoration: none;
+  padding: 0.5rem 0.7rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+header nav .nav-links li a:hover {
+  color: #fdd835;
+}
+header nav .nav-links li.social a {
+  font-size: 1.2rem;
+  padding: 0;
+}
+header nav .nav-links li.social a.facebook { color: #1877f2; }
+header nav .nav-links li.social a.instagram { 
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hamburger menu for mobile */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #f5f5f5;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 70vh;
+  padding: 0.5rem;
+  background: url("images/portada.jpg") no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #FFC107;
+  text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,  
+    -1px 1px 0 #000,  
+    1px 1px 0 #000;
+  position: relative;
+  z-index: 1;
+}
+.hero p {
+  font-size: 1.2rem;
+  max-width: 870px;
+  color: white;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,  
+    -1px 1px 0 #000,  
+    1px 1px 0 #000;
+  position: relative;
+  z-index: 1;
+}
+
+/* Tarifas Section */
+.tarifas {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #0f0f0f;
+}
+
+/* Banner for tarifas section */
+.tarifas-banner {
+  background-color: #fdd835;
+  color: #0f0f0f;
+  padding: 0.8rem 1rem;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* Horizontal scroll for tarifas on mobile */
+.tarifas-scroll-container {
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scrollbar-width: thin;
+  -ms-overflow-style: none;
+}
+.tarifas-scroll-container::-webkit-scrollbar {
+  height: 6px;
+}
+.tarifas-scroll-container::-webkit-scrollbar-thumb {
+  background-color: #fdd835;
+  border-radius: 3px;
+}
+.tarifas-grid {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  width: max-content;
+}
+.tarifa-card {
+  background-color: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 250px;
+}
+
+/* Imagen dentro de las tarjetas de tarifas */
+.tarifa-card img.tarifa-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 1rem;
+}
+.tarifa-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  color: #fdd835;
+}
+.tarifa-card p {
+  margin: 0.3rem 0;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+.tarifa-card .precio {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  color: #fdd835;
+}
+
+/* Centrar el texto de la descripción en las tarjetas de tarifa */
+.tarifa-card p:not(.precio) {
+  text-align: center;
+}
+.tarifa-card .btn {
+  align-self: center;
+}
+
+/* Check-in / Check-out info */
+.check-info {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: #fdd835;
+  color: #0f0f0f;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.btn:hover {
+  background-color: #fbc02d;
+}
+
+/* Servicios Section */
+.servicios {
+  padding: 3rem 2rem;
+  background-color: #101010;
+}
+.servicios-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 2rem;
+  margin-top: 2rem;
+}
+.servicio-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #1e1e1e;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  color: #f5f5f5;
+  font-size: 0.95rem;
+}
+.servicio-item i {
+  color: #fdd835;
+  font-size: 1.2rem;
+}
+
+/* Galería Section */
+.galeria {
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #0f0f0f;
+}
+.slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 8px;
+  background-color: #000;
+}
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.slides img, .slides video {
+  width: 100%;
+  flex-shrink: 0;
+  height: 350px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.slider button.prev,
+.slider button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+.slider button.prev:hover,
+.slider button.next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.slider button.prev { left: 10px; }
+.slider button.next { right: 10px; }
+
+/* Lightbox overlay */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 8px;
+}
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Contacto Section */
+.contacto {
+  padding: 3rem 2rem;
+  background-color: #101010;
+}
+.contacto .descripcion {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  color: #ccc;
+}
+.contacto-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Contact form styling */
+.contact-form {
+  flex: 1 1 350px;
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+.social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+}
+.social-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.social-button i {
+  font-size: 1rem;
+}
+.social-button.whatsapp { background-color: #25D366; }
+.social-button.facebook { background-color: #1877F2; }
+.social-button.instagram { 
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.input-group label {
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+  color: #f5f5f5;
+}
+.input-group input,
+.input-group textarea {
+  padding: 0.6rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #2a2a2a;
+  color: #f5f5f5;
+  font-size: 1rem;
+}
+.input-group input:focus,
+.input-group textarea:focus {
+  outline: none;
+  background-color: #333;
+}
+
+/* Map container */
+.map-container {
+  flex: 1 1 350px;
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.map-container iframe {
+  width: 100%;
+  border: 0;
+  border-radius: 4px;
+  height: 300px;
+}
+.map-container .phone {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.map-container .phone i {
+  color: #25D366;
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  text-decoration: none;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s ease;
+}
+.whatsapp-float:hover {
+  background-color: #1ebe57;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #0f0f0f;
+  color: #ccc;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}
+.site-footer a {
+  color: #66b2ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.site-footer a:hover {
+  text-decoration: underline;
+}
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.footer-left,
+.footer-right {
+  flex: 1 1 300px;
+}
+.footer-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.footer-logo-container img {
+  height: 40px;
+  width: auto;
+}
+.footer-left h4,
+.footer-right h4 {
+  margin: 0.5rem 0;
+  color: #fdd835;
+}
+.footer-left p,
+.footer-right p {
+  margin: 0.2rem 0;
+}
+
+/* Call-to-action section used on the home page */
+.cta {
+  padding: 4rem 2rem;
+  background-color: #101010;
+  text-align: center;
+}
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fdd835;
+}
+.cta p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+.cta .btn {
+  font-size: 1rem;
+}
+
+/* ====== MENÚ HAMBURGUESA ====== */
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+  html, body {
+    padding-top: 70px;
+  }
+  
+  header nav {
+    padding: 0.8rem 1rem;
+  }
+  
+  /* Ocultar texto del logo en móviles */
+  header nav .logo span {
+    display: none;
+  }
+  
+  /* Mostrar iconos sociales en header móvil */
+  .social-header-mobile {
+    display: flex;
+  }
+  
+  /* Ocultar iconos sociales en el menú desplegable */
+  header nav .nav-links li.social {
+    display: none;
+  }
+  
+  .nav-toggle {
+    display: block;
+  }
+  
+  header nav .nav-links {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #0f0f0f;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0.5rem;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    z-index: 998;
+    border-top: 1px solid #222;
+    display: none;
+  }
+  
+  header nav.open .nav-links {
+    transform: translateY(0);
+    display: flex;
+  }
+  
+  header nav .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+  
+  header nav .nav-links li a {
+    display: block;
+    padding: 0.8rem;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .slides img, .slides video {
+    height: 250px;
+  }
+  
+  .servicios-list {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+
+/* Clase para ocultar elementos en móviles */
+.desktop-only {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+}
+
+/* Animación al desplegar */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments */
+@media (min-width: 769px) {
+  .tarifas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: auto;
+  }
+  .contacto-container {
+    flex-direction: row;
+  }
+}
+/* Desktop: mostrar más alto y mover el foco de la foto */
+@media (min-width: 1024px) {
+  .hero{
+    min-height: 75vh;              /* más alto = menos recorte vertical */
+    background-position: center 20%;/* mueve el encuadre, prueba 10%, 30%, etc. */
+  }
+}
+/* Mobile: que el botón se vea y quede a la derecha */
+@media (max-width: 768px) {
+  .nav-toggle{
+    display:block;        /* ya lo tenías, refuerzo */
+    margin-left:auto;     /* empuja el botón a la derecha */
+    z-index:1001;         /* por si algo lo tapaba */
+  }
+  /* opcional: darle borde para que se note aunque no cargue el icono */
+  .nav-toggle{ border:1px solid #444; border-radius:8px; padding:.35rem .55rem; }
+}
+/* ========= Navegación móvil ========= */
+.hamburger{display:none; gap:6px; width:44px;height:44px;border:0;background:transparent;cursor:pointer;margin-left:8px}
+.hamburger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:transform .2s,opacity .2s}
+@media (max-width: 840px){
+  .hamburger{display:flex;align-items:center;justify-content:center;z-index:1001}
+  #mainNav{position:fixed;left:0;right:0;top:64px;background:#101010;border-top:1px solid #222;transform:translateY(-120%);transition:transform .25s ease;z-index:1000}
+  #mainNav.open{transform:translateY(0)}
+  #mainNav ul{display:flex;flex-direction:column;padding:8px 10px;margin:0}
+  #mainNav a{padding:14px 10px;display:block;border-radius:10px}
+  body.menu-open{overflow:hidden}
+}
+
+/* Redes en header */
+.social-links{display:flex;gap:8px;margin-left:auto}
+.social svg{width:22px;height:22px;fill:#fff;opacity:.9;transition:opacity .2s}
+.social:hover svg{opacity:1}
+.social.instagram svg{fill:#E1306C}
+.social.facebook  svg{fill:#1877F2}
+
+/* ========= Botón WhatsApp oficial ========= */
+.wsp-btn{position:fixed;right:16px;bottom:18px;width:64px;height:64px;border-radius:50%;
+background:#25D366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.35);
+z-index:1100;transition:transform .15s ease}
+.wsp-btn:hover{transform:translateY(-2px)}
+.wsp-ico{width:56%;height:56%}
+
+/* ========= Servicios con icono ========= */
+.services-list li{display:flex;align-items:center;gap:12px}
+.services-list .ico{width:24px;height:24px;flex:0 0 24px;display:inline-block}
+.services-list .ico svg{width:100%;height:100%;fill:#cfcfcf}
+
+/* ========= Flechas de galería (sin tocar tu slider) ========= */
+.gallery [class*="prev"], .gallery [class*="next"],
+.gallery .prev, .gallery .next, .gallery .arrow{
+  position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:rgba(0,0,0,.55);color:#fff;border:1px solid rgba(255,255,255,.25);
+  z-index:5;backdrop-filter:blur(2px);font-size:24px;line-height:1
+}
+.gallery [class*="prev"], .gallery .prev{left:12px}
+.gallery [class*="next"], .gallery .next{right:12px}
+.gallery [class*="prev"]::before, .gallery .prev::before{content:"‹"}
+.gallery [class*="next"]::before, .gallery .next::before{content:"›"}
+
+/* ========= Tabs/Barra de tarifas visible en móvil ========= */
+.tarifas-tabs{display:flex;gap:14px;overflow-x:auto;padding-bottom:8px;border-bottom:1px solid #2a2a2a}
+.tarifas-tabs a{position:relative;padding:10px 4px;white-space:nowrap;opacity:.9}
+.tarifas-tabs a.active,.tarifas-tabs a[aria-current="true"]{opacity:1}
+.tarifas-tabs a.active::after,
+.tarifas-tabs a[aria-current="true"]::after{
+  content:"";position:absolute;left:0;right:0;bottom:-9px;height:3px;border-radius:3px;
+  background:#25D366 /* color visible */;
+}
